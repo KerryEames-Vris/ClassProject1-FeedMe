@@ -20,10 +20,37 @@
       </header>
     </nav>
     <main class="container">
-      <section class="row">
-        <div class="col text-center">
-          <h1>Feeling hungry but don't know what to cook?</h1>
-          <h2>Click here to input your ingredients and get started.</h2>
+      <section>
+        <div class="row">
+          <textarea
+            name="ingredient-input"
+            id="ingredient-input"
+            cols="30"
+            rows="1"
+            placeholder="Enter ingredients here"
+            class="col-4"
+          ></textarea>
+          <button
+            id="ingredient-input-button"
+            class="col-2 bg-white p-2 rounded text-dark bg-opacity-50"
+          >
+            Search
+          </button>
+        </div>
+        <div>
+          <ul></ul>
+          <button
+            id="submit-ingredients-button"
+            class="col-2 bg-white p-2 rounded text-dark bg-opacity-50"
+          >
+            Show me recipes!
+          </button>
+          <button
+            id="clear-ingredients-button"
+            class="col-2 bg-white p-2 rounded text-dark bg-opacity-50"
+          >
+            Clear ingredients
+          </button>
         </div>
       </section>
     </main>
