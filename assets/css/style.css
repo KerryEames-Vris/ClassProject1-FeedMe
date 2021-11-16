@@ -1,0 +1,10 @@
+body {
+  height: 1000px;
+}
+
+.landingBG {
+  background-image: url(../images/food-photo.jpeg);
+  background-color: #c6db9f;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
