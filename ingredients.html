@@ -21,24 +21,24 @@
     </nav>
     <main class="container">
       <section>
-        <div class="row">
-          <textarea
+        <form id="ingredient-form" class="row">
+          <input
             name="ingredient-input"
             id="ingredient-input"
             cols="30"
             rows="1"
             placeholder="Enter ingredients here"
             class="col-4"
-          ></textarea>
+          ></input>
           <button
             id="ingredient-input-button"
             class="col-2 bg-white p-2 rounded text-dark bg-opacity-50"
           >
-            Search
+            Save Ingredient
           </button>
-        </div>
+        </form>
         <div>
-          <ul></ul>
+          <ul id="ingredient-list"></ul>
           <button
             id="submit-ingredients-button"
             class="col-2 bg-white p-2 rounded text-dark bg-opacity-50"
