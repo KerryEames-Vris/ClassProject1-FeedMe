@@ -1,10 +1,27 @@
+:root {
+  --darkOrange: #ad4132;
+  --darkYellow: #f4ab2e;
+  --darkGreen: #56733c;
+  --midGreen: #afa842;
+  --lightGreen: #c6db9f;
+  --brown: #784742;
+}
+
 body {
   height: 1000px;
 }
 
-.landingBG {
+.mainbg-image {
   background-image: url(../images/food-photo.jpeg);
-  background-color: #c6db9f;
-  background-size: cover;
+  background-color: var(--lightGreen);
+  background-size: 85%;
   background-repeat: no-repeat;
+  background-position: top 0px center;
+  width: 100%;
+}
+
+.header-bg {
+  background-color: var(--brown);
+  width: 100%;
+  color: var(--darkYellow);
 }
