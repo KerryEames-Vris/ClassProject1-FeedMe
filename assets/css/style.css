@@ -12,12 +12,22 @@ body {
 }
 
 .special-card {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.603);
   box-shadow: 0 0 20px;
 }
 
 .special-button {
   background-color: var(--lightGreen);
+  border: solid var(--darkGreen);
+}
+
+.special-button1 {
+  background-color: var(--darkYellow);
+  border: solid var(--darkGreen);
+}
+
+.special-button2 {
+  background-color: var(--darkOrange);
   border: solid var(--darkGreen);
 }
 
