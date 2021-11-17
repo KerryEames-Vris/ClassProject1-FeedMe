@@ -3,7 +3,6 @@ var storedIngredients = JSON.parse(localStorage.getItem("ingredients")) || [];
 var ingredientForm = $("#ingredient-form");
 var ingredientList = $("#ingredient-list");
 var clearIngredients = $("#clear-ingredients-button");
-var deleteItemButton = $(".delete-item-btn");
 
 function saveIngredients(event) {
   event.preventDefault();
@@ -19,11 +18,15 @@ ingredientForm.on("submit", saveIngredients);
 function renderIngredients() {
   ingredientList.text("");
   for (var i = 0; i < storedIngredients.length; i++) {
-    var ingredientListItem = $("<li class='col-3 p-2 bg-light text-dark'>");
-    ingredientListItem.text(storedIngredients[i]);
-    ingredientListItem.append(
-      '<button class="col-3 btn btn-danger btn-small delete-item-btn">x</button>'
+    var ingredientListItem = $(
+      "<li class='row justify-content-evenly p-2 bg-light text-dark'>"
     );
+    ingredientListItem.text(storedIngredients[i]);
+    ingredientListItem.attr("data-index", i);
+    var deleteItemButton = $(
+      '<button class="col-2 btn btn-danger btn-small delete-item-btn">x</button>'
+    );
+    ingredientListItem.append(deleteItemButton);
     ingredientList.append(ingredientListItem);
   }
 }
@@ -39,9 +42,14 @@ clearIngredients.on("click", function (event) {
 
 function deleteItem(event) {
   event.preventDefault();
-  var btnClicked = $(event.target);
-  if (btnClicked.matches("button")) {
+  var btnClicked = event.target;
+  if (btnClicked.matches(".delete-item-btn")) {
+    var parentItem = btnClicked.parentElement;
+    var index = parentItem.getAttribute("data-index");
+    storedIngredients.splice(index, 1);
+    localStorage.setItem("ingredients", JSON.stringify(storedIngredients));
+    renderIngredients();
   }
 }
 
-deleteItemButton.on("click", deleteItem);
+ingredientList.on("click", deleteItem);
