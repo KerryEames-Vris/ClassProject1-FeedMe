@@ -18,7 +18,16 @@ ingredientForm.on("submit", saveIngredients);
 function renderIngredients() {
   ingredientList.text("");
   for (var i = 0; i < storedIngredients.length; i++) {
-    ingredientList.append("<li>" + storedIngredients[i] + "</li>");
+    var ingredientListItem = $(
+      "<li class='row justify-content-evenly p-2 bg-light text-dark'>"
+    );
+    ingredientListItem.text(storedIngredients[i]);
+    ingredientListItem.attr("data-index", i);
+    var deleteItemButton = $(
+      '<button class="col-2 btn btn-danger btn-small delete-item-btn">x</button>'
+    );
+    ingredientListItem.append(deleteItemButton);
+    ingredientList.append(ingredientListItem);
   }
 }
 
@@ -30,3 +39,17 @@ clearIngredients.on("click", function (event) {
   storedIngredients = JSON.parse(localStorage.getItem("ingredients")) || [];
   renderIngredients();
 });
+
+function deleteItem(event) {
+  event.preventDefault();
+  var btnClicked = event.target;
+  if (btnClicked.matches(".delete-item-btn")) {
+    var parentItem = btnClicked.parentElement;
+    var index = parentItem.getAttribute("data-index");
+    storedIngredients.splice(index, 1);
+    localStorage.setItem("ingredients", JSON.stringify(storedIngredients));
+    renderIngredients();
+  }
+}
+
+ingredientList.on("click", deleteItem);
