@@ -1,4 +1,3 @@
-
 :root {
   --darkOrange: #ad4132;
   --darkYellow: #f4ab2e;
@@ -10,6 +9,20 @@
 
 body {
   height: 1000px;
+}
+
+.special-card {
+  background: transparent;
+  box-shadow: 0 0 20px;
+}
+
+.special-button {
+  background-color: var(--lightGreen);
+  border: solid var(--darkGreen);
+}
+
+.special-nav {
+  background-color: rgb(252, 243, 243);
 }
 
 .mainbg-image {
@@ -34,4 +47,3 @@ input {
   border-left: 1px solid black;
   padding: 10px;
 }
-
