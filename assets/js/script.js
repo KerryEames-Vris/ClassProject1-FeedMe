@@ -19,7 +19,7 @@ function renderIngredients() {
   ingredientList.text("");
   for (var i = 0; i < storedIngredients.length; i++) {
     var ingredientListItem = $(
-      "<li class='row justify-content-evenly p-2 bg-light text-dark'>"
+      "<li class='row justify-content-between p-2 bg-light text-dark'>"
     );
     ingredientListItem.text(storedIngredients[i]);
     ingredientListItem.attr("data-index", i);
