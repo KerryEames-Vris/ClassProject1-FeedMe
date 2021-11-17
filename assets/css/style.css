@@ -22,12 +22,12 @@ body {
 }
 
 .special-nav {
-  background-color: rgb(252, 243, 243);
+  background-image: linear-gradient(rgb(252, 243, 243), var(--darkOrange));
 }
 
 .mainbg-image {
   background-image: url(../images/food-photo.jpeg);
-  background-color: var(--lightGreen);
+  background-color: var(--darkOrange);
   background-size: 85%;
   background-repeat: no-repeat;
   background-position: top 0px center;
@@ -58,5 +58,3 @@ ul {
 ul li {
   margin: 1.2rem 0;
 }
-
-
