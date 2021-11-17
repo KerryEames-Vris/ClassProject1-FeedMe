@@ -25,6 +25,10 @@ body {
   background-image: linear-gradient(rgb(252, 243, 243), var(--darkOrange));
 }
 
+.special-footer {
+  background-image: linear-gradient(var(--darkOrange), rgb(252, 243, 243));
+}
+
 .mainbg-image {
   background-image: url(../images/food-photo.jpeg);
   background-color: var(--darkOrange);
