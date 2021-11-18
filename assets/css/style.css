@@ -9,6 +9,12 @@
 
 body {
   height: 1000px;
+  background-image: url(../images/food-photo.jpeg);
+  background-color: var(--darkOrange);
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: top 125px center;
+  width: 100%;
 }
 
 .special-card {
@@ -37,15 +43,6 @@ body {
 
 .special-footer {
   background-image: linear-gradient(var(--darkOrange), rgb(252, 243, 243));
-}
-
-.mainbg-image {
-  background-image: url(../images/food-photo.jpeg);
-  background-color: var(--darkOrange);
-  background-size: 85%;
-  background-repeat: no-repeat;
-  background-position: top 0px center;
-  width: 100%;
 }
 
 .header-bg {
