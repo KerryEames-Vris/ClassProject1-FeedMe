@@ -49,7 +49,9 @@ FeedMe is A web application that takes user input of existing ingredients in the
 
 You and your group will use everything you’ve learned over the past six units to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
 
+
 - [x] Use a CSS framework such as Bootstrap.
+
 
 - [x]Be deployed to GitHub Pages.
 

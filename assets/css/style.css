@@ -79,3 +79,20 @@ ul {
 ul li {
   margin: 1.2rem 0;
 }
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+  .special-button2 {
+    background-color: var(--midGreen);
+    border: solid var(--darkGreen);
+    color: var();
+  }
+  #submit-ingredients-button,
+  #clear-ingredients-button {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
