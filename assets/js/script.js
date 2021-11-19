@@ -3,6 +3,7 @@ var storedIngredients = JSON.parse(localStorage.getItem("ingredients")) || [];
 var ingredientForm = $("#ingredient-form");
 var ingredientList = $("#ingredient-list");
 var clearIngredients = $("#clear-ingredients-button");
+var submitBtn = $("#submit-ingredients-button");
 
 function saveIngredients(event) {
   event.preventDefault();
@@ -30,6 +31,14 @@ function renderIngredients() {
     ingredientList.append(ingredientListItem);
   }
 }
+
+function nextPage() {
+  location.href = "recipe.html";
+}
+
+submitBtn.on("click", function () {
+  nextPage;
+});
 
 renderIngredients();
 
