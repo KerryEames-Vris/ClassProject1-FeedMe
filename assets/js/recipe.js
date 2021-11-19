@@ -1,77 +1,107 @@
-// save user inputs to local storage and render to screen as list items
 var storedIngredients = JSON.parse(localStorage.getItem("ingredients")) || [];
-var ingredientForm = $("#ingredient-form");
-var ingredientList = $("#ingredient-list");
-var clearIngredients = $("#clear-ingredients-button");
-var searchResult = $("search-Result");
-// var apiID = ;
-// var apiKey =;
 
-function saveIngredients(event) {
-  event.preventDefault();
-  var ingredientInput = $("#ingredient-input").val();
-  storedIngredients.push(ingredientInput);
-  localStorage.setItem("ingredients", JSON.stringify(storedIngredients));
-  $("#ingredient-input").val("");
-  renderIngredients();
-}
-
-ingredientForm.on("submit", saveIngredients);
-
-function renderIngredients() {
-  ingredientList.text("");
-  for (var i = 0; i < storedIngredients.length; i++) {
-    ingredientList.append("<li>" + storedIngredients[i] + "</li>");
+function ingredientsUrl() {
+  var myNewIngredients = storedIngredients;
+  if (myNewIngredients !== null) {
+    console.log(myNewIngredients);
   }
+  var ingredientString = myNewIngredients[0];
+  for (var i = 1; i < myNewIngredients.length; i++) {
+    ingredientString += ",+";
+    ingredientString += myNewIngredients[i];
+  }
+  if (ingredientString.includes("/ /")) {
+    ingredientString = ingredientString.replace(/ /g, "");
+  }
+  return ingredientString;
 }
 
-renderIngredients();
+var newIngredientUrl = ingredientsUrl();
 
-clearIngredients.on("click", function (event) {
-  event.preventDefault();
-  localStorage.clear();
-  storedIngredients = JSON.parse(localStorage.getItem("ingredients")) || [];
-  renderIngredients();
-});
+async function getRecipeName() {
+  var urlCore =
+    "https://api.spoonacular.com/recipes/findByIngredients?ingredients=" +
+    newIngredientUrl +
+    "&number=4&ranking=1&apiKey=dddc7a96d8424e599a741a91929eb96a";
+  fetch(urlCore, {
+    method: "GET",
+    withCredentials: true,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(async function (data) {
+      console.log(data);
+      for (var i = 0; i < data.length; i++) {
+        var recipeResults = document.getElementById("recipeResult");
+        var recipe = document.createElement("div");
+        var recipeCard = document.createElement("div");
+        var recipeImg = document.createElement("img");
+        var recipeDetails = document.createElement("div");
+        var recipeTitle = document.createElement("h5");
+        var recipeText = document.createElement("p");
+        var recipeLink = document.createElement("a");
+        var recipeId = data[i].id;
 
-ingredientForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  (searchQuery = e.target.querySelector("input")), value;
-  fetchAPI();
-});
+        recipe.classList.add("col-auto", "mb-3");
+        recipeCard.classList.add("card", "h-100", "special-card", "my-5");
+        recipeCard.style.width = "18rem";
+        recipeImg.classList.add("card-img-top");
+        recipeImg.src = data[i].image;
+        recipeDetails.classList.add("card-body");
+        recipeTitle.classList.add("card-title");
+        recipeTitle.textContent = data[i].title;
+        recipeText.classList.add("card-text");
+        recipeDetails.setAttribute("id", recipeId);
 
-//search result section
-// async function fetchAPI() {
-//     var baseURL = ''
-//     var response = await fetch(baseURL)
-//     var data = await response.json();
-//     generateHTML(data.hits)
-//     console.log(data);
-// }
-// function generateHTML(results){
-//    let generatedHTML = '';
-//     results.map(result => {
-//         generatedHTML +=
-//              <div class="search-Result"
-//     <div class="container-fluid mt-4">
-//       <div class="row justify-content-center">
-//         <div class="col-auto mb-3">
-//           <div class="card h-100" style="width: 18rem">
-//             <a href="">
-//               <img class="card-img-top" src="${result.recipe.image}" />
-//             </a>
-//             <div class="card-body">
-//               <h5 class="card-title">${result.recipe.label}</h5>
-//               <p class="card-text">
-//                 Recipe Info: Lorem ipsum dolor sit amet, consectetur adipisicing
-//                 elit. A, dicta unde, cumque aspernatur debitis fuga sit delectus
-//                 quos adipisci praesentium neque!
-//               </p>
-//               <a href="${result.recipe.url}" target="_blank" class="btn btn-primary">Full Recipe Link</a>
-//             </div>
-//           </div>
-//         </div>
-//     })
-//     searchResult.innerhtml = generatedHTML;
+        recipeLink.classList.add("btn", "btn-primary", "special-button");
+        recipeLink.text = "Full Recipe Link";
 
-// }
+        recipeResults.append(recipe);
+        recipe.append(recipeCard);
+        recipeCard.append(recipeImg);
+        recipeCard.append(recipeDetails);
+        recipeDetails.append(recipeTitle);
+        recipeDetails.append(recipeText);
+        document.getElementById(recipeId).append(recipeLink);
+        await getRecipeUrl(recipeId).then(function (theUrl) {
+          recipeLink.href = theUrl;
+          console.log({ theUrl });
+        });
+      }
+    });
+}
+
+async function getRecipeUrl(dataId) {
+  var recipeUrlResult;
+  var urlRecipe =
+    "https://api.spoonacular.com/recipes/" +
+    dataId +
+    "/information?apiKey=dddc7a96d8424e599a741a91929eb96a";
+
+  return await fetch(urlRecipe, {
+    method: "GET",
+    withCredentials: true,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then(function (response2) {
+      return response2.json();
+    })
+    .then(function (data2) {
+      console.log(data2);
+      console.log(data2.spoonacularSourceUrl);
+      recipeUrlResult = data2.spoonacularSourceUrl;
+      return data2.spoonacularSourceUrl;
+    });
+}
+
+function generateRecipes() {
+  getRecipeName();
+}
+
+window.onload = generateRecipes();

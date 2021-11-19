@@ -3,6 +3,7 @@ var storedIngredients = JSON.parse(localStorage.getItem("ingredients")) || [];
 var ingredientForm = $("#ingredient-form");
 var ingredientList = $("#ingredient-list");
 var clearIngredients = $("#clear-ingredients-button");
+var submitBtn = $("#submit-ingredients-button");
 
 function saveIngredients(event) {
   event.preventDefault();
@@ -19,7 +20,7 @@ function renderIngredients() {
   ingredientList.text("");
   for (var i = 0; i < storedIngredients.length; i++) {
     var ingredientListItem = $(
-      "<li class='row justify-content-between p-2 bg-light text-dark'>"
+      "<li class='row justify-content-between rounded p-2 bg-light text-dark'>"
     );
     ingredientListItem.text(storedIngredients[i]);
     ingredientListItem.attr("data-index", i);
@@ -30,6 +31,14 @@ function renderIngredients() {
     ingredientList.append(ingredientListItem);
   }
 }
+
+function nextPage() {
+  location.href = "recipe.html";
+}
+
+submitBtn.on("click", function () {
+  nextPage;
+});
 
 renderIngredients();
 
