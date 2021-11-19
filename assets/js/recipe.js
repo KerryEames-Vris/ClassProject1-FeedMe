@@ -47,8 +47,9 @@ async function getRecipeName() {
         var recipeId = data[i].id;
 
         recipe.classList.add("col-auto", "mb-3");
-        recipeCard.classList.add("card", "h-100", "special-card", "my-5");
+        recipeCard.classList.add("card", "special-card-recipes", "my-5");
         recipeCard.style.width = "18rem";
+        recipeCard.style.height = "22rem";
         recipeImg.classList.add("card-img-top");
         recipeImg.src = data[i].image;
         recipeDetails.classList.add("card-body");
