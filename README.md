@@ -1,8 +1,11 @@
-# ClassProject1-FeedMe DRAFT
+# ClassProject1-FeedMe
+
+[View Wireframe PDF](https://drive.google.com/file/d/1ZNftDrsfVWJeI5NDnfK6bboUVeiMlvV7/view?usp=sharing).
+![Application](./assets/images/LandingPageSC.png).
 
 # Description
 
-A web application that takes user input of existing ingredients in their home and points them to possible recipes. This is able to reference recipes that contain ingriednts the user enters into forms. This can be used for party planning, meal planning, or just personal use.
+FeedMe is A web application that takes user input of existing ingredients in their home and points them to possible recipes. This is able to reference recipes that contain ingriednts the user enters into forms. This can be used for party planning, meal planning, or just personal use.
 
 # User Story
 
@@ -16,7 +19,7 @@ A web application that takes user input of existing ingredients in their home an
   ### A: Whats in your Pantry?
   ### B: How about a Drink?
 
-## Option A
+### Option A
 
 - When I'm looking for inspiration to make a meal.
 - Then I click the "Click to list your ingredients" button and taken to the Ingredients Page.
@@ -31,7 +34,7 @@ A web application that takes user input of existing ingredients in their home an
 - When I click the "Full Recipe Link" button.
 - Then I am taken to a web page which contains instructions on how to make the recipe.
 
-## Option B
+### Option B
 
 - When I'm looking for inspiration to make a drink.
 - Then I click the "Click to Choose a Refreshment" button which takes me to the Cocktails Page.
@@ -42,31 +45,11 @@ A web application that takes user input of existing ingredients in their home an
 - When I want a different cocktail with the same spirit
 - Then I click the "find me a cocktail" button again and a different recipe renders to the screen.
 
-## Presentation Requirements
-
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following:
-
-## Elevator pitch:
-
-We have all gone into the kitchen, looked at the ingredients we have, only to turn around and place a takeout out order or simply go out to eat.
-But if we have learned anything from the past year it's that sometimes going out is not an option.
-We've developed a quick convenient way to lower your food waste and create new recipes and cocktails to add to your cooking skills!
-
-- Concept: What is your user story? What was your motivation for development?
-
-- Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-
-- Demo: Show your stuff!
-
-- Directions for Future Development
-
-- Links to the deployed application and the GitHub repository
-
 # Task
 
 You and your group will use everything you’ve learned over the past six units to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
 
-- [x] Use a CSS framework other than Bootstrap.
+- [x] Use a CSS framework such as Bootstrap.
 
 - [x]Be deployed to GitHub Pages.
 
