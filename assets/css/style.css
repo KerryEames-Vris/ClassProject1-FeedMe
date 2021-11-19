@@ -79,3 +79,14 @@ ul {
 ul li {
   margin: 1.2rem 0;
 }
+
+@media (max-width: 730px) {
+  body {
+    background-image: none;
+  }
+  .special-button2 {
+    background-color: var(--midGreen);
+    border: solid var(--darkGreen);
+    color: var();
+  }
+}
