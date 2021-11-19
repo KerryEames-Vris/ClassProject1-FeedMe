@@ -2,25 +2,44 @@
 
 # Description
 
-A web application that takes user input of existing ingredients in their home and points them to possible recipes. This is able to reference recipes under parameters of dietary restrictions, meal size, meal shelf life. This can be used for party planning, meal planning, or just personal use.
+A web application that takes user input of existing ingredients in their home and points them to possible recipes. This is able to reference recipes that contain ingriednts the user enters into forms. This can be used for party planning, meal planning, or just personal use.
 
 # User Story
 
 ## GIVEN
 
-- I am a user that is hungry and doesnt know what to make
+- I am a user that is hungry and / or thirsty and doesnt know what to make
 - When I have ingredients to use
-- Then I want to know what meals I can make
+- Then I want to know what meals or adult beverages I can make with those ingredients
 - When I open the webpage
-- Then I want to see options for styles of meals (snacks/ single lunch/ dinner meal)
-- When I've selected an option
-- Then I want to be taken to a form that lets me enter what ingedients I have
-- When I've entered my ingredients
-- Then I want to be able to stipulate on dietary restrictions or preferences
-- When I have entered all this information
-- Then I am presented with meal options and recipes as well as a picture of the end result
-- When I select my options
-- Then I am shown recipe details, nutritional facts, and a link to a video that prepares the recipe (if applicable)
+- Then I see two options:
+  ### A: Whats in your Pantry?
+  ### B: How about a Drink?
+
+## Option A
+
+- When I'm looking for inspiration to make a meal.
+- Then I click the "Click to list your ingredients" button.
+- When I land on the Ingredients Page.
+- Then I am presented with a form that prompts the user to enter Ingredients Here.
+- When I've entered my ingredients and press "Save Ingredient" button.
+- Then a list of my ingredients renders to the screen.
+- When I am done entering the Ingredients I want to use.
+- Then I press the "Show me Recipes" button.
+- When I land on the Recipe Page.
+- Then I am presented four Cards that contains an image, a title of the recipe, and a link to how to make a recipe that includes some or all of my saved ingredients.
+- When I click the "Full Recipe Link" button.
+- Then I am taken to a web page which contains instruction on how to make the recipe.
+
+## Option B
+
+- When I'm looking for inspiration to make a drink.
+- Then I click the "Click to Choose a Refreshment" button.
+- When I land on the Cocktails Page.
+- Then I am presented with a dropdown menu to select a Spirit
+- When I select a spirit and click the "Find me a cocktail!" button.
+- Then I am presented with one Card that contains an image of the cocktail, the title of the cocktail, and instructions on how to make it.
+-
 
 ## Presentation Requirements
 
