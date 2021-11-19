@@ -8,13 +8,13 @@
 }
 
 body {
-  height: 1000px;
   background-image: url(../images/food-photo.jpeg);
   background-color: var(--darkOrange);
   background-size: 85%;
   background-repeat: no-repeat;
   background-position: top 125px center;
   width: 100%;
+  padding-bottom: 200px;
 }
 
 .special-card {
