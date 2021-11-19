@@ -22,6 +22,11 @@ body {
   box-shadow: 0 0 20px;
 }
 
+.special-card2 {
+  background: rgb(252, 252, 252);
+  box-shadow: 0 0 20px;
+}
+
 .special-button {
   background-color: var(--lightGreen);
   border: solid var(--darkGreen);
