@@ -1,10 +1,10 @@
 :root {
-  --darkOrange: #ad4132;
-  --darkYellow: #f4ab2e;
-  --darkGreen: #56733c;
-  --midGreen: #afa842;
-  --lightGreen: #c6db9f;
-  --brown: #784742;
+  --darkOrange: #8ca77e;
+  --darkYellow: #da945c;
+  --darkGreen: rgb(98, 166, 57);
+  --midGreen: #f5d861;
+  --lightGreen: #61827d;
+  --brown: #060706;
 }
 
 body {
@@ -17,6 +17,14 @@ body {
   padding-bottom: 200px;
 }
 
+.special-button {
+  justify-content: center;
+}
+
+.card-title {
+  text-align: center;
+}
+
 .special-card {
   background: rgba(255, 255, 255, 0.603);
   box-shadow: 0 0 20px;
@@ -25,6 +33,13 @@ body {
 .special-card-recipes {
   background: rgba(255, 255, 255, 0.603);
   box-shadow: 0 0 20px;
+}
+
+.special-card-cocktails {
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 0 25px;
+  max-width: 429px;
 }
 
 .special-card2 {
@@ -38,12 +53,12 @@ body {
 }
 
 .special-button1 {
-  background-color: var(--darkYellow);
+  background-color: var(--darkOrange);
   border: solid var(--darkGreen);
 }
 
 .special-button2 {
-  background-color: var(--darkOrange);
+  background-color: var(--darkYellow);
   border: solid var(--darkGreen);
 }
 

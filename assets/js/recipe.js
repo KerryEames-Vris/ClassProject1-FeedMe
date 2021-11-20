@@ -47,14 +47,14 @@ async function getRecipeName() {
         var recipeId = data[i].id;
 
         recipe.classList.add("col-auto", "mb-3");
-        recipeCard.classList.add("card", "special-card-recipes", "my-5");
+        recipeCard.classList.add("card", "special-card-recipes", "my-5", "text-center");
         recipeCard.style.width = "18rem";
         recipeCard.style.height = "22rem";
-        recipeImg.classList.add("card-img-top");
-        recipeImg.src = data[i].image;
-        recipeDetails.classList.add("card-body");
         recipeTitle.classList.add("card-title");
         recipeTitle.textContent = data[i].title;
+        recipeDetails.classList.add("card-body");
+        recipeImg.classList.add("card-img");
+        recipeImg.src = data[i].image;
         recipeText.classList.add("card-text");
         recipeDetails.setAttribute("id", recipeId);
 

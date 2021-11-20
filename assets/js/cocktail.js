@@ -14,7 +14,7 @@ let randomNumber;
 
 function getCocktails(spirit) {
   displayCocktailDiv.innerHTML =
-    '<p class="loadingMessage">Choosing a cocktail for you...</p>';
+    '<h4 class="loadingMessage">Fetching a cocktail based on your spirit of choice...</h4>';
   fetch(`${baseURL}${spirit}`)
     .then((response) => response.json())
     .then((data) => {
@@ -49,8 +49,8 @@ function getCocktailById(cocktailID) {
       selectedDrinkInstructions = selectedDrink.strInstructions;
 
       displayCocktailDivIngredients.innerHTML = `
-<img src=${selectedDrinkImage} alt=${selectedDrinkName} style="height: 500px; width: 600px" class="card=img-top" id="cocktailImage"/>
-          <h1 class= "card-title" id="cocktailName">${selectedDrinkName}</h1>
+      <h1 class= "card-title" id="cocktailName">${selectedDrinkName}</h1>
+        <img src=${selectedDrinkImage} alt=${selectedDrinkName} style="height: 317.75px; width: 429px my -1px text-align-center" class="card=img-top" id="cocktailImage"/>
             <h3>Ingredients</h3>
             <span class="card-text" id="measurement1">${selectedDrink.strMeasure1}</span>
             <span class="card-text" id="ingredient1">${selectedDrink.strIngredient1}</span>`;
