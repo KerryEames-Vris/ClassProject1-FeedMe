@@ -1,10 +1,10 @@
 :root {
-  --darkOrange: #ad4132;
-  --darkYellow: #f4ab2e;
-  --darkGreen: #56733c;
-  --midGreen: #afa842;
-  --lightGreen: #c6db9f;
-  --brown: #784742;
+  --darkOrange: #8ca77e;
+  --darkYellow: #da945c;
+  --darkGreen: rgb(98, 166, 57);
+  --midGreen: #f5d861;
+  --lightGreen: #61827d;
+  --brown: #060706;
 }
 
 body {
@@ -53,12 +53,12 @@ body {
 }
 
 .special-button1 {
-  background-color: var(--darkYellow);
+  background-color: var(--darkOrange);
   border: solid var(--darkGreen);
 }
 
 .special-button2 {
-  background-color: var(--darkOrange);
+  background-color: var(--darkYellow);
   border: solid var(--darkGreen);
 }
 

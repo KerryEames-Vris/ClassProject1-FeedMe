@@ -50,9 +50,9 @@ async function getRecipeName() {
         recipeCard.classList.add("card", "special-card-recipes", "my-5", "text-center");
         recipeCard.style.width = "18rem";
         recipeCard.style.height = "22rem";
-        recipeDetails.classList.add("card-body");
         recipeTitle.classList.add("card-title");
         recipeTitle.textContent = data[i].title;
+        recipeDetails.classList.add("card-body");
         recipeImg.classList.add("card-img");
         recipeImg.src = data[i].image;
         recipeText.classList.add("card-text");
