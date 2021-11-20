@@ -27,6 +27,13 @@ body {
   box-shadow: 0 0 20px;
 }
 
+.special-card-cocktails {
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 0 25px;
+  max-width: 429px;
+}
+
 .special-card2 {
   background: rgb(252, 252, 252);
   box-shadow: 0 0 20px;

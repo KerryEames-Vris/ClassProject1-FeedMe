@@ -11,7 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/cocktails.css" />
   </head>
 
   <body class="mainbg-image bg-image mh-100">
@@ -30,7 +30,7 @@
         <h2 id="title">Cocktail Creator</h2>
         <h3 id="subheading">Search By Spirit</h3>
       </div> -->
-      <div class="row justify-content-center pt-5">
+      <div class="row justify-content-center pt-3">
         <form class="col-6">
             <select autofocus id="textInput" class="form-select form-control my-3" aria-label="Default select example">
               <option class="col-4" value="Click to select">Select your spirit</option>
@@ -43,15 +43,18 @@
         </form>
         <button class="col-auto special-button rounded my-3" id="submitButton">Find me a cocktail!</button>
       </div>
-      <div class="container-fluid mt-5 search-Result">
+
+      <!-- search results -->
+      <div class="container-fluid mt-2 search-Result">
         <div class="row justify-content-center">
           <div class="col-auto mb-3">
-            <div class="ingredients card special-card-recipes my-5" id="cocktailResults">
-
+            <div class="ingredients card special-card-cocktails my-4 justify-content-center" id="cocktailResults" >  
             </div>
           </div>
         </div>  
       </div>
+
+
       
       
   </main>

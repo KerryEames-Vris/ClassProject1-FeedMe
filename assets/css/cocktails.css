@@ -1,0 +1,113 @@
+:root {
+  --BorderHeader: rgb(162, 234, 200);
+  --ButtonFill: rgb(133, 127, 255);
+  --ButtonBorder: rgb(152, 30, 38);
+  --midGreen: #f6e71c;
+  --lightGreen: rgb(162, 234, 200);
+  --brown: #784742;
+}
+
+body {
+  background-image: url(../images/cockatils-bg-image.png);
+  background-color: var(--BorderHeader);
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: top 125px center;
+  width: 100%;
+  padding-bottom: 200px;
+}
+
+.special-button {
+  justify-content: center;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.special-card {
+  background: rgba(255, 255, 255, 0.603);
+  box-shadow: 0 0 20px;
+}
+
+.special-card-recipes {
+  background: rgba(255, 255, 255, 0.603);
+  box-shadow: 0 0 20px;
+}
+
+.special-card-cocktails {
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 0 25px;
+  max-width: 429px;
+}
+
+.special-card2 {
+  background: rgb(252, 252, 252);
+  box-shadow: 0 0 20px;
+}
+
+.special-button {
+  background-color: var(--lightGreen);
+  border: solid var(--ButtonFill);
+}
+
+.special-button1 {
+  background-color: var(--ButtonBorder);
+  border: solid var(--ButtonFill);
+}
+
+.special-button2 {
+  background-color: var(--BorderHeader);
+  border: solid var(--ButtonFill);
+}
+
+.special-nav {
+  background-image: linear-gradient(rgb(133, 127, 255), var(--BorderHeader));
+}
+
+.special-footer {
+  background-image: linear-gradient(var(--BorderHeader), rgb(133, 127, 255));
+}
+
+.header-bg {
+  background-color: var(--brown);
+  width: 100%;
+  color: var(--ButtonBorder);
+}
+
+input {
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+ul {
+  margin: 3rem auto;
+  font-size: 1.75rem;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  margin: 1.2rem 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+  .special-button2 {
+    background-color: var(--midGreen);
+    border: solid var(--ButtonFill);
+    color: var();
+  }
+  #submit-ingredients-button,
+  #clear-ingredients-button {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
