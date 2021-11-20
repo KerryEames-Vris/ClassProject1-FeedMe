@@ -47,17 +47,7 @@ function getCocktailById(cocktailID) {
       selectedDrinkName = selectedDrink.strDrink;
       selectedDrinkImage = selectedDrink.strDrinkThumb;
       selectedDrinkInstructions = selectedDrink.strInstructions;
-      var cockName = $(
-        "<p id+'cocktailName'>" + `${selectedDrinkName}` + "</p>"
-      );
-      var cockIMG = $(
-        `<img src=${selectedDrinkImage} alt=${selectedDrinkName} id='cocktailImage'/>`
-      );
-      // displayCocktailDiv.innerHTML = `
-      // <div class="dispayCocktail">
-      //
-      //
-      // `;
+
       displayCocktailDivIngredients.innerHTML = `
 <img src=${selectedDrinkImage} alt=${selectedDrinkName} style="height: 500px; width: 600px" class="card=img-top" id="cocktailImage"/>
           <h1 class= "card-title" id="cocktailName">${selectedDrinkName}</h1>
