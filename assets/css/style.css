@@ -17,6 +17,14 @@ body {
   padding-bottom: 200px;
 }
 
+.special-button {
+  justify-content: center;
+}
+
+.card-title {
+  text-align: center;
+}
+
 .special-card {
   background: rgba(255, 255, 255, 0.603);
   box-shadow: 0 0 20px;
